@@ -1,20 +1,17 @@
 
-Main.py
-
-100 %
 import sys, matplotlib.pyplot as plt, networkx as nx
 from matplotlib.patches import FancyArrowPatch
 
 # === Definición del DFA ===
 states = {"q0","q1","q2","q3","q4", "q5", "q6"}
 alphabet = {"a","b"}
-delta = {("q0","a"):"q1", 
-        ("q1","b"):"q2", 
-        ("q2","a"):"q3", 
-        ("q3","a"):"q4", 
-        ("q4","a"):"q5", 
-        ("q5","b"):"q6", 
-        ("q1","b"):"q1", 
+delta = {("q0","a"):"q1",
+        ("q1","a"):"q2",
+        ("q2","a"):"q3",
+        ("q3","a"):"q4",
+        ("q4","a"):"q5",
+        ("q5","a"):"q6",
+        ("q1","b"):"q1",
         ("q5","b"):"q5"}
 
 q0, F = "q0", {"q6"}
@@ -74,4 +71,3 @@ if __name__=='__main__':
         plt.ioff(); plt.show()
     except Exception as e:
         print("RECHAZA:", e)
-Mostrando Main.py.
